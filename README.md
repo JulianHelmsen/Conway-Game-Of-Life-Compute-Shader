@@ -3,8 +3,8 @@ This is an implementation of conways game of life with a compute shader.
 
 ## Building
 Requirements:
-* A C compiler
-* glfw installed
+* C compiler (only tested with clang)
+* glfw
 
 
 To build just use the Makefile.
