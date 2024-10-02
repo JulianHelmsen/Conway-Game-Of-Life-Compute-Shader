@@ -4,13 +4,21 @@
 #include <stdlib.h>
 #include <string.h>
 #include <assert.h>
+#ifndef __WIN32
 #include <unistd.h>
+#endif
 
 
 #define WIDTH 500
 #define HEIGHT 500
 #define WINDOW_SCALE 4
 #define SLEEP_TIME 0
+
+void sleep_us(unsigned long long us) {
+#ifndef __WIN32
+    usleep(us);
+#endif
+}
 
 unsigned int ceil_div(unsigned int a, unsigned int d) {
     return (a + d - 1) / d;
@@ -312,7 +320,7 @@ int main() {
     }
 
     while(!glfwWindowShouldClose(wnd)) {
-        usleep(SLEEP_TIME);
+        sleep_us(SLEEP_TIME);
         const int output = 1 - input;
 
         glActiveTexture(GL_TEXTURE0);

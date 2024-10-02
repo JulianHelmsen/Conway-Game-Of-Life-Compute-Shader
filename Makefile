@@ -1,3 +1,3 @@
 
 all:
-	clang -ggdb main.c glad/glad.c -I. -lglfw -Wall -Wextra
+	$(CC) -ggdb main.c glad/glad.c -I. -lglfw -Wall -Wextra
