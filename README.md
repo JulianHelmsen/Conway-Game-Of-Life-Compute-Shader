@@ -11,3 +11,8 @@ To build just use the Makefile.
 ```
 $ make
 ```
+
+## Placing cells and running the simulation
+After starting the application
+you can first place cells using the left mouse button.
+The simulation starts after you press space.
