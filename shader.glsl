@@ -24,7 +24,6 @@ void main() {
         CELLS[shared_pixel_pos.x][shared_pixel_pos.y] = 0;
     }
 
-    memoryBarrierShared();
     barrier();
     
 
